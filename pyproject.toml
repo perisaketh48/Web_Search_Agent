@@ -1,0 +1,38 @@
+[project]
+name = "web-search-agent"
+version = "0.1.0"
+description = "AI-powered web search agent built with LangGraph, Streamlit, and Qdrant."
+readme = "README.md"
+requires-python = ">=3.11,<3.13"
+
+dependencies = [
+    "langgraph>=1.2.9",
+    "logfire>=4.38.0",
+    "openai>=2.46.0",
+    "portkey-ai>=2.3.3",
+    "pydantic>=2",
+    "pydantic-settings>=2.14.2",
+    "python-dotenv>=1.2.2",
+    "qdrant-client>=1.18.0",
+
+    # Explicit torch dependency
+    "torch>=2.8.0",
+
+    "sentence-transformers>=5.6.0",
+    "streamlit>=1.59.2",
+    "tavily-python>=0.7.26",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.4.0",
+    "ruff>=0.12.0",
+]
+
+[tool.uv.sources]
+torch = { index = "pytorch-cpu" }
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
