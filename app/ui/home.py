@@ -27,6 +27,9 @@ def run_app():
     if "groq_api_key" not in st.session_state:
         st.session_state.groq_api_key = ""
 
+    # ADD THIS
+    if "current_answer" not in st.session_state:
+        st.session_state.current_answer = None
 
     render_sidebar()
     render_search()
