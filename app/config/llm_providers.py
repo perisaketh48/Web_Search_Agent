@@ -8,7 +8,7 @@ LLM_PROVIDERS = {
     },
     "groq": {
     "provider": "groq",
-    "portkey_provider": "@groq-for-saketh",
+    "portkey_provider": "@gorq-for-saketh",
     "model": "openai/gpt-oss-120b",
     },
 }
